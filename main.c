@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include <stdlib.h>
 
-void selectionSort(int * number, int number_count);
+double selectionSort(int * number, int number_count);
 
 int main()
 {
@@ -11,5 +11,6 @@ int main()
 	{
 		number[i] = rand();
 	}
-	selectionSort(number, number_count);
+	double selectionTime = selectionSort(number, number_count);
+	printf("%.0f 毫秒\n", selectionTime * 1000);
 }

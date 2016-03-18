@@ -2,8 +2,7 @@
 #include "stdlib.h"
 #include "time.h"
 
-void selectionSort(int * number, int number_count)
-
+double selectionSort(int * number, int number_count)
 {
 	clock_t start, finish;
 	double duration;
@@ -27,6 +26,5 @@ void selectionSort(int * number, int number_count)
 		}
 	}
 	finish = clock();
-	duration = (double)(finish - start) / CLOCKS_PER_SEC;
-	printf("%.0f 毫秒\n", duration*1000);
+	return duration = (double)(finish - start) / CLOCKS_PER_SEC;
 }
