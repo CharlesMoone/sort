@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 double selectionSort(int * number, int number_count);
+double bubbleSort(int * number, int number_count);
 
 int main()
 {
@@ -11,6 +12,8 @@ int main()
 	{
 		number[i] = rand();
 	}
-	double selectionTime = selectionSort(number, number_count);
-	printf("%.0f 毫秒\n", selectionTime * 1000);
+	double sortTime = selectionSort(number, number_count);
+	printf("选择排序算法使用时间：%.0f 毫秒\n", sortTime * 1000);
+	sortTime = bubbleSort(number, number_count);
+	printf("冒泡排序算法使用时间：%.0f 毫秒\n", sortTime * 1000);
 }
